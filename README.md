@@ -10,7 +10,7 @@ Cada fuente de video (cámaras, formas geometricas, osciladores, etc) pueden ser
 ## Instalación y Uso
 
 Hydra puede usarse directamente  [desde un navegador web](https://hydra-editor.glitch.me/).  
-Allí se puede cargar un *sketch* aleatorio clickando en el botón ![](./random.png) y comenzar a modificar los parámetros para ver los resultados que produce presionando  `ctrl + Enter`.
+Allí se puede cargar un *sketch* aleatorio clickando en el botón ![](./images/random.png) y comenzar a modificar los parámetros para ver los resultados que produce presionando  `ctrl + Enter`.
 
 
 
@@ -21,12 +21,12 @@ También es posible instalar hydra en el editor de textos [atom](http://atom.io)
 
 Descargar e instalar el editor de textos [atom](https://atom.io/)
 
-![](./atom.png)
+![](./images/atom.png)
 
 ### Instalar hydra
  Ir a las preferencias de atom ( `ctrl + ,` ) y buscar e instalar el package `atom-hydra`
 
- ![](./settings.png)
+ ![](./images/settings.png)
 
 ### Uso
 
@@ -39,7 +39,7 @@ Descargar e instalar el editor de textos [atom](https://atom.io/)
 
 Hydra se inspira en la síntesis modular en dónde cada módulo realiza una operación específica y se conectan las entradas y salidas a las entradas y salidas de otros módulos para producir resultados más complejos de los que puede realizar un módulo por separado.
 
-![](./eurorack.jpg)
+![](./images/eurorack.jpg)
 
 Los módulos de sintetizadores modulares suelen estar categorizados en **generadores** o **modificadores**. Por ejemplo, un **VCO** (oscilador controlado por voltaje) es un **generador**, mientras que un **VCF** (filtro controlado por voltaje) es un **modificador**.
 
@@ -50,7 +50,7 @@ En hydra se sigue esta lógica y cada función puede ser vista como un módulo d
 
 Si ejecutamos en hydra `osc().rotate().out()` veremos lo siguiente
 
-![](./osc.png)
+![](./images/osc.png)
 
 Aquí hay tres funciones encadenadas por puntos: `osc()` , `rotate()` y `out()`, y podemos pensar estos puntos como cables que conectan los módulos entre sí (`osc--->rotate--->out`)
 
@@ -65,7 +65,7 @@ s0.initCam()
 src(s0).kaleid(6).out()
 ```
 
-![](./ojos.png)
+![](./images/ojos.png)
 
 
 ### Utilizando listas como parámetros
@@ -112,4 +112,3 @@ voronoi([1,10,100].fast(0.01))
 
 
 [Aquí](https://github.com/ojack/hydra/blob/master/docs/funcs.md) está el listado de las funciones disponibles en hydra.
-
