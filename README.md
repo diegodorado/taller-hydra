@@ -37,7 +37,7 @@ Descargar e instalar el editor de textos [atom](https://atom.io/)
 
 ## ¿Cómo funciona?
 
-Hydra se inspira en la síntesis modular en dónde cada módulo realiza una operación específica y se conectan las entradas y salidas a las entradas y salidas de otros módulos para producir resultados más complejos de los que puede realizar un módulo por separado.
+Hydra se inspira en la síntesis modular en dónde cada módulo realiza una operación específica y se interconectan las entradas y salidas de varios módulos para producir resultados más complejos de los que puede realizar un módulo por separado.
 
 ![](./images/eurorack.jpg)
 
