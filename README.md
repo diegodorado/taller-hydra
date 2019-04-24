@@ -101,10 +101,44 @@ voronoi([1,10,100].fast(0.01))
 ```
 
 
+### Utilizando audio
+Al iniciarse, `hydra` nos pide acceso al micrófono, ya que puede utilizarse para modular parámetros.
+
+En la esquina inferior izquierda podemos ver  el movimeinto de los niveles de 4 bandas de frecuencias ejecutando
+```js
+  a.show()
+```
+
+Estos valores, normalizados (entre 0 y 1) están disponibles en las variables `a.fft[0]`,`a.fft[1]`,`a.fft[2]` y `a.fft[3]`.
+
+Así podemos, por ejemplo, escalar un rectangulo según lo que reciba el micrófono:
+```js
+  shape(4).color(1,0,1).scale( () => a.fft[0] *2 ).out()
+```
+
+Un ejemplo mas completo utilizando las cuatro bandas, y cuatro salidas de video diferentes:
+```js
+  shape(4).color(0,0,1).scale( () => a.fft[0] *2 ).out(o0)
+  shape(5).color(1,0,1).scale( () => a.fft[1] *2 ).out(o1)
+  shape(6).color(0,1,1).scale( () => a.fft[2] *2 ).out(o2)
+  shape(7).color(0.5,0,1).scale( () => a.fft[3] *2 ).out(o3)
+  render()
+```
+
+Otra variante:
+```js
+  voronoi(10).color(0,() => a.fft[0] *2,1).out(o0)
+  noise(() => a.fft[1] *200).rotate(1,1).color(1,0,0.5).out(o1)
+  osc(40).color(0,1,1).scale( () => a.fft[2] *2 ).out(o2)
+  shape(7).color(0.5,0,1).scale( () => a.fft[3] *2 ).out(o3)
+  render()
+```
+
+
+
+
 ### Mezclando señales
 ...
-### Utilizando audio
-...  
 
 
 
